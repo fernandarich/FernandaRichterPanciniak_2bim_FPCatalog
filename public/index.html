@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FP Catalog</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+
+        <button id="btn-menu" class="btn-menu">☰</button>
+        <h1>FP Catalog</h1>
+
+        <button class="btn-adicionarrr" id="btn-adicionar-jogo">
+            + Adicionar Jogo
+        </button>
+
+        <input type="text" id="pesquisa" placeholder="Pesquisar jogo...">
+    </header>
+
+    <div class="layout">
+
+        <aside id="sidebar" class="sidebar">
+
+            <button id="fechar-menu" class="fechar-menu">✕</button>
+
+            <h3>Gêneros</h3>
+
+            <nav id="menu-filtros">
+                <a href="#"
+                    class="btn-filtro ativo">Todos</a><!--o # significa que o link não leva a lugar algum, ou seja, fica na mesma página-->
+                <a href="#" class="btn-filtro">RPG</a><!--então ele funciona como filtro-->
+                <a href="#" class="btn-filtro">Sandbox</a>
+                <a href="#" class="btn-filtro">Aventura</a>
+                <a href="#" class="btn-filtro">Ação</a>
+                <a href="#" class="btn-filtro">Terror</a>
+                <a href="#" class="btn-filtro">Battle Royale</a>
+                <a href="#" class="btn-filtro">Simulação</a>
+                <a href="#" class="btn-filtro">Estratégia</a>
+                <a href="#" class="btn-filtro">Esportes</a>
+                <a href="#" class="btn-filtro">Corrida</a>
+            </nav>
+
+        </aside>
+
+        <main>
+
+            <section class="hero">
+                <h2>Seu catálogo de jogos favorito</h2>
+                <p>Descubra novos mundos, aventuras e desafios.</p>
+            </section>
+
+            <section class="catalogo" id="destaques">
+
+                <h2>Jogos em Destaque</h2>
+
+                <div class="cards">
+
+                    <article class="card" onclick="buscarDescricao(2)">
+                        <img src="imagens/minecraft.jpg" alt="Minecraft">
+                        <h3>Minecraft</h3>
+                        <p>Sandbox</p>
+                        <span>⭐ 9.5</span>
+                    </article>
+
+                    <article class="card" onclick="buscarDescricao(3)">
+                        <img src="imagens/hollow.jpg" alt="Hollow Knight">
+                        <h3>Hollow Knight</h3>
+                        <p>Aventura</p>
+                        <span>⭐ 9.7</span>
+                    </article>
+
+                </div>
+
+            </section>
+
+            <section class="catalogo">
+
+                <h2>Jogos</h2>
+
+                <p id="sem-resultados" style="display: none; color: #888; font-style: italic; margin: 20px 0;">Nenhum
+                    jogo
+                    encontrado para a sua pesquisa.</p>
+
+                <div class="lista-jogos">
+                    <article class="jogo" onclick="buscarDescricao(1)">
+                        <img src="imagens/stardew.jpg" alt="Stardew Valley">
+                        <h3>Stardew Valley</h3>
+                        <p>Simulação</p>
+                        <span>⭐ 9.3</span>
+                    </article>
+
+                    <article class="jogo" onclick="buscarDescricao(8)">
+                        <img src="imagens/fortnite.jpg" alt="Fortnite">
+                        <h3>Fortnite</h3>
+                        <p>Battle Royale</p>
+                        <span>⭐ 8.3</span>
+                    </article>
+
+                    <article class="jogo" onclick="buscarDescricao(9)">
+                        <img src="imagens/league.webp" alt="League of Legends">
+                        <h3>League of Legends</h3>
+                        <p>Estratégia</p>
+                        <span>⭐ 7.7</span>
+                    </article>
+
+                    <article class="jogo" onclick="buscarDescricao(6)">
+                        <img src="imagens/roblox.jpg" alt="Roblox">
+                        <h3>Roblox</h3>
+                        <p>Sandbox</p>
+                        <span>⭐ 9.5</span>
+                    </article>
+
+                    <article class="jogo" onclick="buscarDescricao(7)">
+                        <img src="imagens/thesims.jpg" alt="The Sims 4">
+                        <h3>The Sims 4</h3>
+                        <p>Simulação</p>
+                        <span>⭐ 8.5</span>
+                    </article>
+
+                    <article class="jogo" onclick="buscarDescricao(4)">
+                        <img src="imagens/reddead.jpg" alt="Red Dead Redemption">
+                        <h3>Red Dead Redemption</h3>
+                        <p>Aventura</p>
+                        <span>⭐ 9.2</span>
+                    </article>
+
+                    <article class="jogo" onclick="buscarDescricao(5)">
+                        <img src="imagens/aquiet.jpg" alt="A Quiet Place">
+                        <h3>A Quiet Place The Road Ahead</h3>
+                        <p>Sobrevivência</p>
+                        <span>⭐ 7.5</span>
+                    </article>
+
+                    <article class="jogo" onclick="buscarDescricao(10)">
+                        <img src="imagens/overcooked.jpg" alt="Overcooked!">
+                        <h3>Overcooked!</h3>
+                        <p>Simulação</p>
+                        <span>⭐ 8.9</span>
+                    </article>
+
+                    <article class="jogo" onclick="buscarDescricao(11)">
+                        <img src="imagens/godofwar.jpg" alt="God of War">
+                        <h3>God of War</h3>
+                        <p>Ação</p>
+                        <span>⭐ 9.7</span>
+                    </article>
+
+                    <article class="jogo" onclick="buscarDescricao(12)">
+                        <img src="imagens/residente.jpg" alt="Resident Evil 4">
+                        <h3>Resident Evil 4</h3>
+                        <p>Terror</p>
+                        <span>⭐ 9.6</span>
+                    </article>
+
+                    <article class="jogo" onclick="buscarDescricao(13)">
+                        <img src="imagens/pubg.jpg" alt="PUBG: Battlegrounds">
+                        <h3>PUBG: Battlegrounds</h3>
+                        <p>Battle Royale</p>
+                        <span>⭐ 8.7</span>
+                    </article>
+
+                    <article class="jogo" onclick="buscarDescricao(14)">
+                        <img src="imagens/lifeis.jpg" alt="Life is Strange">
+                        <h3>Life is Strange</h3>
+                        <p>Aventura</p>
+                        <span>⭐ 9.1</span>
+                    </article>
+
+                    <article class="jogo" onclick="buscarDescricao(15)">
+                        <img src="imagens/valorant.jpg" alt="Valorant">
+                        <h3>Valorant</h3>
+                        <p>Ação</p>
+                        <span>⭐ 8.8</span>
+                    </article>
+
+                    <article class="jogo" onclick="buscarDescricao(16)">
+                        <img src="imagens/genshin.jpg" alt="Genshin Impact">
+                        <h3>Genshin Impact</h3>
+                        <p>RPG</p>
+                        <span>⭐ 8.9</span>
+                    </article>
+
+                    <article class="jogo" onclick="buscarDescricao(17)">
+                        <img src="imagens/freefire.webp" alt="Free Fire">
+                        <h3>Free Fire</h3>
+                        <p>Battle Royale</p>
+                        <span>⭐ 8.4</span>
+                    </article>
+
+                    <article class="jogo" onclick="buscarDescricao(18)">
+                        <img src="imagens/clash.webp" alt="Clash Royale">
+                        <h3>Clash Royale</h3>
+                        <p>Estratégia</p>
+                        <span>⭐ 8.6</span>
+                    </article>
+
+                    <article class="jogo" onclick="buscarDescricao(19)">
+                        <img src="imagens/fnaf.jpg" alt="Five Nights at Freddy's">
+                        <h3>Five Nights at Freddy's</h3>
+                        <p>Terror</p>
+                        <span>⭐ 8.5</span>
+                    </article>
+
+                    <article class="jogo" onclick="buscarDescricao(20)">
+                        <img src="imagens/cuphead.png" alt="Cuphead">
+                        <h3>Cuphead</h3>
+                        <p>Ação</p>
+                        <span>⭐ 9.0</span>
+                    </article>
+
+                    <article class="jogo" onclick="buscarDescricao(21)">
+                        <img src="imagens/poppy.jpg" alt="Poppy Playtime">
+                        <h3>Poppy Playtime</h3>
+                        <p>Terror</p>
+                        <span>⭐ 8.2</span>
+                    </article>
+
+                    <article class="jogo" onclick="buscarDescricao(22)">
+                        <img src="imagens/road.jpg" alt="Road 96">
+                        <h3>Road 96</h3>
+                        <p>Aventura</p>
+                        <span>⭐ 8.9</span>
+                    </article>
+
+                    <article class="jogo" onclick="buscarDescricao(23)">
+                        <img src="imagens/plant.png" alt="Plants vs. Zombies">
+                        <h3>Plants vs. Zombies</h3>
+                        <p>Estratégia</p>
+                        <span>⭐ 8.8</span>
+                    </article>
+
+                    <article class="jogo" onclick="buscarDescricao(24)">
+                        <img src="imagens/terraria.jpg" alt="Terraria">
+                        <h3>Terraria</h3>
+                        <p>Sandbox</p>
+                        <span>⭐ 9.8</span>
+                    </article>
+
+                    <article class="jogo" onclick="buscarDescricao(25)">
+                        <img src="imagens/fifa.webp" alt="EA Sports">
+                        <h3>EA Sports FC 26</h3>
+                        <p>Esportes</p>
+                        <span>⭐ 7.0</span>
+                    </article>
+
+                    <article class="jogo" onclick="buscarDescricao(26)">
+                        <img src="imagens/mario.jpg" alt="Mario Kart">
+                        <h3>Mario Kart</h3>
+                        <p>Corrida</p>
+                        <span>⭐ 8.7</span>
+                    </article>
+
+                </div>
+
+            </section>
+
+            <aside>
+                <h3>Curiosidade Gamer</h3>
+
+                <p id="curiosidade">
+                    Carregando estatísticas...
+                </p>
+            </aside>
+
+        </main>
+
+        <div id="modal" class="modal">
+
+            <div class="modal-content">
+
+                <span class="fechar" onclick="fecharModal()">
+                    ×
+                </span>
+
+                <h2 id="titulo-jogo"></h2>
+
+                <p id="descricao-jogo"></p>
+                
+                <div class="info-jogo">
+
+                    <div class="info-item">
+                        <span class="titulo-info">💰 Preço</span>
+                        <p id="preco-jogo"></p>
+                    </div>
+
+                    <div class="info-item">
+                        <span class="titulo-info">🎮 Plataformas</span>
+                        <p id="plataforma-jogo"></p>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+
+
+        <div id="modal-adicionar" class="modal">
+
+            <div class="modal-content">
+
+                <span class="fechar" onclick="fecharModalAdicionar()">
+                    ×
+                </span>
+
+                <h2>Adicionar Jogo</h2>
+
+                <input type="text" placeholder="Nome do jogo">
+
+                <input type="text" placeholder="Gênero">
+
+                <input type="text" placeholder="Plataformas">
+
+                <input type="number" placeholder="Ano de lançamento">
+
+                <input type="number" step="0.1" placeholder="Nota">
+
+                <input type="text" placeholder="Preço">
+
+                <textarea placeholder="Descrição"></textarea>
+
+                <button class="btn-enviar-jogo" onclick="adicionarJogo()">
+                    Adicionar
+                </button>
+
+            </div>
+
+        </div>
+    </div>
+    <footer>
+        <p>Fernanda Richter Panciniak - FP Catalog © 2026</p>
+    </footer>
+
+</body>
+<script>
+
+    // --- 1ª CHAMADA FETCH: BUSCAR DETALHES DO JOGO (ROTA /jogos/:id) ---
+    async function buscarDescricao(id) {
+        try {
+            const resposta = await fetch('http://localhost:3000/jogos/' + id);
+            const jogo = await resposta.json();
+
+            document.getElementById('titulo-jogo').textContent = jogo.nome;
+            document.getElementById('descricao-jogo').textContent = jogo.descricao;
+            document.getElementById('plataforma-jogo').textContent = jogo.plataforma;
+
+            // Captura o preço como texto do banco
+            const elementoPreco = document.getElementById('preco-jogo');
+            const precoBanco = jogo.preco.trim().toLowerCase();
+
+            // Se no banco estiver escrito algo com "gratis", exibe a palavra estilizada
+            if (precoBanco.includes('gratis') || precoBanco.includes('grátis')) {
+                elementoPreco.textContent = "Grátis";
+            } else {
+                // Substitui vírgula por ponto caso tenha digitado com vírgula no banco
+                const valorNumerico = Number(jogo.preco.replace(',', '.'));
+
+                if (!isNaN(valorNumerico)) {
+                    elementoPreco.textContent = valorNumerico.toLocaleString('pt-BR', {
+                        style: 'currency',
+                        currency: 'BRL'
+                    });
+                } else {
+                    // Caso tenha digitado qualquer outra coisa, exibe o texto puro do banco
+                    elementoPreco.textContent = jogo.preco;
+                }
+            }
+
+            document.getElementById('modal').style.display = 'block';
+        } catch (erro) {
+            console.error('Erro ao buscar detalhes do jogo:', erro);
+        }
+    }
+
+    function fecharModal() {
+        document.getElementById('modal').style.display = 'none';
+    }
+
+    // --- SISTEMA DE PESQUISA EM TEMPO REAL ---
+    const pesquisa = document.getElementById('pesquisa');
+
+    pesquisa.addEventListener('input', () => {
+        const texto = pesquisa.value.toLowerCase();
+        const destaque = document.getElementById('destaques');
+        const todos = document.querySelectorAll('.card, .jogo');
+        const avisoSemResultados = document.getElementById('sem-resultados');
+
+        let temPesquisa = texto.trim().length > 0;
+        let jogosVisiveis = 0;
+
+        // Esconde "Jogos em Destaque" quando estiver pesquisando
+        destaque.style.display = temPesquisa ? 'none' : 'block';
+
+        todos.forEach(item => {
+            const nome = item.querySelector('h3').textContent.toLowerCase();
+
+            if (nome.includes(texto)) {
+                item.style.display = '';
+                jogosVisiveis++;
+            } else {
+                item.style.display = 'none';
+            }
+        });
+
+        if (jogosVisiveis === 0 && temPesquisa) {
+            avisoSemResultados.style.display = 'block';
+        } else {
+            avisoSemResultados.style.display = 'none';
+        }
+    });
+
+    // --- SISTEMA DE FILTROS POR CATEGORIA ---
+    const filtros = document.querySelectorAll('.btn-filtro');
+
+    filtros.forEach(filtro => {
+        filtro.addEventListener('click', (evento) => {
+            evento.preventDefault(); // Evita rolagem para o topo por causa do #
+
+            filtros.forEach(f => f.classList.remove('ativo'));
+            filtro.classList.add('ativo');
+
+            const categoriaSelecionada = filtro.textContent.trim().toLowerCase();
+            const destaque = document.getElementById('destaques');
+            const todosOsJogos = document.querySelectorAll('.card, .jogo');
+
+            destaque.style.display = (categoriaSelecionada === 'todos') ? 'block' : 'none';
+
+            todosOsJogos.forEach(item => {
+                const categoriaJogo = item.querySelector('p').textContent.trim().toLowerCase();
+
+                if (categoriaSelecionada === 'todos' || categoriaJogo === categoriaSelecionada) {
+                    item.style.display = '';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+
+            pesquisa.value = '';
+        });
+    });
+
+    // --- 2ª CHAMADA FETCH: CARREGAR ESTATÍSTICAS (ROTA /estatisticas) ---
+    async function carregarEstatisticas() {
+        try {
+            const resposta = await fetch('http://localhost:3000/estatisticas');
+            const dados = await resposta.json();
+
+            document.getElementById('curiosidade').innerHTML = `
+                🎮 Temos ${dados.totalJogos} jogos cadastrados.<br>
+                ⭐ Nota média dos jogos: ${dados.mediaNotas}
+            `;
+        } catch (erro) {
+            console.error('Erro ao carregar estatísticas:', erro);
+        }
+    }
+
+    // --- 3ª CHAMADA FETCH: VALIDAR CONEXÃO DE GÊNEROS (ROTA /generos) ---
+    async function carregarGenerosDoBanco() {
+        try {
+            const resposta = await fetch('http://localhost:3000/generos');
+            const generos = await resposta.json();
+            // Exibe no console para provar que a rota foi consumida com sucesso
+            console.log('Gêneros carregados do banco com sucesso:', generos);
+        } catch (erro) {
+            console.error('Erro ao buscar gêneros:', erro);
+        }
+    }
+
+    // --- EXECUÇÕES AO CARREGAR A PÁGINA ---
+    carregarEstatisticas();
+    carregarGenerosDoBanco();
+
+    // --- CONTROLE DO MODAL DE ADICIONAR ---
+    const btnAdicionar = document.getElementById('btn-adicionar-jogo');
+
+    btnAdicionar.addEventListener('click', () => {
+        document.getElementById('modal-adicionar').style.display = 'block';
+    });
+
+    function fecharModalAdicionar() {
+        document.getElementById('modal-adicionar').style.display = 'none';
+        limparFormulario();
+    }
+
+    function adicionarJogo() {
+        alert('Sugestão enviada! O cadastro completo será implementado no próximo bimestre.');
+        fecharModalAdicionar();
+    }
+
+    function limparFormulario() {
+        const campos = document.querySelectorAll('#modal-adicionar input, #modal-adicionar textarea');
+        campos.forEach(campo => {
+            campo.value = '';
+        });
+    }
+
+    const btnMenu = document.getElementById("btn-menu");
+    const sidebar = document.getElementById("sidebar");
+
+    btnMenu.addEventListener("click", () => {
+        sidebar.classList.toggle("aberta");
+    });
+
+    document.addEventListener("click", (evento) => {
+
+        if (
+            !sidebar.contains(evento.target) &&
+            !btnMenu.contains(evento.target)
+        ) {
+            sidebar.classList.remove("aberta");
+        }
+
+    });
+
+    const fecharMenu = document.getElementById("fechar-menu");
+
+    fecharMenu.addEventListener("click", () => {
+        sidebar.classList.remove("aberta");
+    });
+
+</script>
+
+</html>

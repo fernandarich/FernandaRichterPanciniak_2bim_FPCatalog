@@ -1,0 +1,56 @@
+CREATE TABLE generos (
+    id_genero SERIAL PRIMARY KEY,
+    nome_genero VARCHAR(50) NOT NULL
+);
+
+CREATE TABLE jogos (
+    id_jogo SERIAL PRIMARY KEY,
+    nome VARCHAR(200) NOT NULL,
+    id_genero INT REFERENCES generos(id_genero),
+    plataforma VARCHAR(150),
+    ano_lanc INT,
+    descricao TEXT,
+    nota DECIMAL(3,1),
+	preco TEXT,
+	imagem TEXT
+);
+INSERT INTO generos (nome_genero)
+VALUES ('RPG'), ('Sandbox'), ('Aventura'), ('Terror'), ('Battle Royale'), ('Ação'), ('Simulação'), ('Estratégia'), ('Esporte'), ('Corrida');
+
+INSERT INTO jogos (nome, id_genero, plataforma, ano_lanc, descricao, nota, preco)
+VALUES ('Stardew Valley', 7, 'PS4, PS5, Nintendo Switch, Xbox, Android', 2016, 'Stardew Valley é um RPG de simulação e vida rural criado por Eric "ConcernedApe" Barone. Você herda a fazenda abandonada de seu avô e deve transformar o campo em um terreno próspero, cultivando plantações, criando animais, minerando, pescando e interagindo com a comunidade local.', 8.8, '24,99'),
+('Minecraft', 2, 'Todas', 2009, 'O Minecraft é um jogo de aventura em estilo sandbox (caixa de areia) onde os jogadores exploram mundos tridimensionais gerados proceduralmente. O jogo permite extrair matérias-primas, criar ferramentas, construir estruturas e lutar contra criaturas, com opções que vão desde sobreviver à noite até criar obras de arte.', 8.4, '148,25'),
+('Hollow Knight', 3, 'Ninstendo Switch, PS5, PS4', 2017, 'Hollow Knight é um aclamado jogo de ação e aventura em estilo Metroidvania 2D, desenvolvido pelo estúdio independente Team Cherry. Você controla um guerreiro insetoide silencioso enquanto explora as ruínas de Hallownest, um vasto e interconectado reino subterrâneo assolado por uma infecção sobrenatural.', 9.0, '46,99'),
+('Red Dead Redemption', 3, 'Todas', 2010, 'Red Dead Redemption é um jogo de ação e aventura em mundo aberto com temática de Velho Oeste, desenvolvido pela Rockstar Games. Situado em 1911, durante o declínio da fronteira americana, o jogador controla John Marston, um ex-fora da lei que é forçado pelo governo a caçar os membros de sua antiga gangue em troca de sua família.', 9.2, '249,50'),
+('A Quiet Place The Road Ahead', 4, 'PS5, Xbox Series, PC', 2024, 'A Quiet Place: The Road Ahead é um jogo de terror de sobrevivência lançado em 17 de outubro de 2024, baseado na aclamada franquia cinematográfica Um Lugar Silencioso. Desenvolvido pela Stormind Games e publicado pela Saber Interactive, o título coloca o jogador em um mundo pós-apocalíptico onde criaturas cegas e mortais caçam suas presas exclusivamente pelo som.', 7.5, '99,90'),
+('Roblox', 2, 'Todas', 2004, 'O Roblox é uma plataforma global e imersiva de criação de jogos online. Nela, os usuários não apenas jogam uma variedade infinita de experiências 3D criadas pela comunidade, mas também podem desenvolver seus próprios jogos usando a ferramenta Roblox Studio.', 9.5, 'Grátis'),
+('The Sims 4', 7, 'PS4, PS5, Xbox, PC', 2000, 'The Sims é uma famosa franquia de jogos eletrônicos de simulação de vida. Muitas vezes comparado a uma "casa de bonecas virtual", o game permite que você crie personagens (chamados de Sims) com personalidades e aparências únicas, construa e decore casas, e controle a rotina, as carreiras e os relacionamentos deles.', 8.5, 'Grátis'),
+('Fortnite', 5, 'PS4, PS5, Xbox, Nintendo Switch, PC', 2017, 'O Fortnite é um popular jogo eletrônico multijogador online desenvolvido pela Epic Games, lançado em 2017. Embora seja mundialmente famoso pelo seu modo gratuito de sobrevivência Battle Royale, onde 100 jogadores lutam entre si para ser o último sobrevivente, o jogo se expandiu para oferecer múltiplas experiências.', 8.3, 'Grátis'),
+('League of Legends', 8, 'PC, Android, iOS', 2009, 'League of Legends (LoL) é um jogo eletrônico de estratégia do gênero MOBA (Multiplayer Online Battle Arena) onde duas equipes de cinco jogadores se enfrentam. O objetivo é controlar um "campeão" com habilidades únicas e trabalhar em equipe para destruir o Nexus, a estrutura principal localizada na base inimiga.', 7.7, 'Grátis'),
+('Overcooked', 7, 'Todas', 2016, 'Overcooked é um jogo de simulação e cooperação caótica onde 1 a 4 jogadores controlam chefs de cozinha. Em equipe, é preciso preparar, cozinhar e servir pedidos antes que os clientes fiquem impacientes. O objetivo principal é salvar o Reino da Cebola de uma antiga ameaça', 9.0, '39,99'),
+('God of War', 6, 'PC, PS4, PS5', 2018,'God of War é um jogo de ação e aventura que acompanha Kratos e seu filho Atreus em uma jornada pelos reinos da mitologia nórdica. Juntos, eles enfrentam deuses, monstros e desafios enquanto fortalecem sua relação familiar.',9.7, '259,49'),
+('Resident Evil 4', 4, 'PC, PS4, PS5, Xbox One, Xbox Series', 2023, 'Resident Evil 4 é um jogo de terror e sobrevivência em que o agente Leon S. Kennedy é enviado para resgatar a filha do presidente dos Estados Unidos em uma vila isolada dominada por uma ameaça misteriosa. O jogador enfrenta criaturas perigosas, resolve enigmas e luta para sobreviver.', 9.6, '169,00'),
+('PUBG: Battlegrounds', 5, 'PC, PS4, PS5, Xbox One, Xbox Series, Nintendo Switch, Android, iOS', 2017, 'PUBG: Battlegrounds é um jogo de battle royale em que até 100 jogadores competem em uma ilha, buscando equipamentos e recursos enquanto a área segura diminui gradualmente. O objetivo é ser o último sobrevivente em partidas intensas e estratégicas.', 8.7, 'Grátis'),
+('Life is Strange', 3, 'PC, PS4, PS5, Xbox One, Xbox Series, Nintendo Switch, Android, iOS', 2015, 'Life is Strange é um jogo de aventura narrativa em que a estudante Max Caulfield descobre a capacidade de voltar no tempo. Ao lado de sua amiga Chloe Price, ela investiga mistérios da cidade de Arcadia Bay enquanto suas escolhas influenciam diretamente a história e seus diferentes desfechos.', 9.1, '97,00'),
+('Valorant', 6, 'PC', 2020, 'Valorant é um jogo de tiro tático em primeira pessoa desenvolvido pela Riot Games. Duas equipes de cinco jogadores competem em partidas estratégicas utilizando armas e habilidades únicas de agentes para cumprir objetivos e vencer rodadas.', 8.8, 'Grátis'),
+('Genshin Impact', 1, 'PC, PS4, PS5, Android, iOS', 2020, 'Genshin Impact é um RPG de ação em mundo aberto desenvolvido pela HoYoverse. O jogador explora o continente de Teyvat, encontra personagens com habilidades elementais únicas e embarca em uma jornada para encontrar seu irmão desaparecido enquanto desvenda os segredos do mundo.', 8.9, 'Grátis'),
+('Free Fire', 5, 'Android, iOS', 2017, 'Free Fire é um jogo de battle royale desenvolvido pela Garena. Os jogadores são lançados em uma ilha e precisam buscar equipamentos, enfrentar adversários e sobreviver enquanto a área segura diminui gradualmente. O último jogador ou equipe sobrevivente vence a partida.', 8.4, 'Grátis'),
+('Clash Royale', 8, 'Android, iOS', 2016, 'Clash Royale é um jogo competitivo em tempo real desenvolvido pela Supercell. Os jogadores montam baralhos com cartas de tropas, feitiços e estruturas para enfrentar adversários em batalhas estratégicas, com o objetivo de destruir as torres inimigas e conquistar troféus.', 8.6, 'Grátis'),
+('Five Nights at Freddy''s', 4, 'PC, PS4, PS5, Xbox One, Xbox Series, Nintendo Switch, Android, iOS', 2014, 'Five Nights at Freddy''s é um jogo de terror em que o jogador assume o papel de um segurança noturno em uma pizzaria. Utilizando câmeras de vigilância e recursos limitados, é necessário monitorar os animatrônicos que ganham vida durante a noite e sobreviver até o amanhecer.', 8.5, ' 6,81'),
+('Cuphead', 3, 'PC, PS4, Xbox One, Nintendo Switch', 2017, 'Cuphead é um jogo de ação e aventura inspirado nos desenhos animados da década de 1930. Os jogadores controlam Cuphead e Mugman em uma jornada para quitar uma dívida com o Diabo, enfrentando chefes desafiadores e explorando fases cheias de obstáculos.', 9.0, '36,99'),
+('Poppy Playtime', 4, 'PC, PS4, PS5, Xbox One, Xbox Series, Nintendo Switch, Android, iOS', 2021, 'Poppy Playtime é um jogo de terror e quebra-cabeças em que o jogador explora uma fábrica de brinquedos abandonada para investigar o desaparecimento de antigos funcionários. Durante a jornada, criaturas misteriosas e brinquedos vivos representam ameaças constantes.', 8.2, '109,96'),
+('Road 96', 3, 'PC, PS4, PS5, Xbox One, Xbox Series, Nintendo Switch', 2021, 'Road 96 é um jogo de aventura narrativa em que o jogador assume o papel de diferentes jovens tentando escapar de um regime autoritário. Durante uma viagem pelas estradas do país de Petria, cada decisão influencia a história, os personagens encontrados e os possíveis finais da jornada.', 8.9, '74,99'),
+('Plants vs. Zombies', 8, 'PC, PS3, Xbox 360, Android, iOS', 2009, 'Plants vs. Zombies é um jogo em que o jogador utiliza diferentes tipos de plantas para defender sua casa contra hordas de zumbis. Cada planta possui habilidades únicas, exigindo estratégia e planejamento para superar os desafios de cada fase.', 8.8, '9,90'),
+('Terraria', 2, 'PC, PS4, PS5, Xbox One, Xbox Series, Nintendo Switch', 2011, 'Terraria é um jogo de ação e aventura em mundo aberto e estilo sandbox 2D, desenvolvido pela Re-Logic. Nele, os jogadores exploram um vasto mundo gerado proceduralmente para minerar recursos, construir cidades, coletar mais de 500 armas e equipamentos, e derrotar dezenas de chefes desafiadores.', 9.8, '19,99'),
+('EA SPORTS FC 26', 9, 'PC, PS4, PS5, Xbox One, Xbox Series, Nintendo Switch', 2025, 'EA Sports FC 24 é o jogo de futebol da Electronic Arts, marcando o início da nova franquia após o fim da parceria com a FIFA. O simulador destaca-se pelo realismo, incluindo mais de 19.000 atletas, 700 times, 30 ligas licenciadas e a inclusão do futebol feminino no modo Ultimate Team.', 7.0, '69,99'), 
+('Mario Kart', 10, 'Nintendo Switch', 1992, 'Mario Kart é uma famosa franquia de jogos eletrônicos de corrida e ação desenvolvida e publicada pela Nintendo. Os jogadores controlam personagens do universo de Mario e competem em karts ou karts aéreos em pistas temáticas, utilizando itens estratégicos e poderes especiais para atrapalhar os adversários e alcançar o primeiro lugar.', 8.7, '329,90');
+
+
+--DROP TABLE jogos;
+--DROP TABLE generos;
+
+--SELECT * FROM jogos;
+
+--SELECT nome, nota FROM jogos;
+
+--SELECT * FROM jogos WHERE id_genero = 1;
