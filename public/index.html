@@ -32,11 +32,11 @@
             <h3>Atalhos</h3>
 
             <nav class="menu-atalhos">
-                <a href="#" id="btn-favoritos" class="btn-filtro">
+                <a href="#" id="btn-favoritos" class="btn-atalho">
                     ❤️ Favoritos
                 </a>
 
-                <a href="#" id="btn-recomendar" class="btn-filtro">
+                <a href="#" id="btn-recomendar" class="btn-atalho">
                     🎲 Me Recomende um Jogo
                 </a>
             </nav>
@@ -638,7 +638,35 @@
 
     const favoritos = JSON.parse(localStorage.getItem('favoritos')) || [];
 
-    document.querySelectorAll('.jogo').forEach(jogo => {
+    document
+        .getElementById('btn-favoritos')
+        .addEventListener('click', function (e) {
+
+            e.preventDefault();
+
+            const favoritos =
+                JSON.parse(localStorage.getItem('favoritos')) || [];
+
+            const jogos =
+                document.querySelectorAll('.jogo');
+
+            document.getElementById('destaques')
+                .style.display = 'none';
+
+            jogos.forEach(jogo => {
+
+                const nome =
+                    jogo.querySelector('h3').textContent;
+
+                if (favoritos.includes(nome)) {
+                    jogo.style.display = '';
+                } else {
+                    jogo.style.display = 'none';
+                }
+
+            });
+        });
+    document.querySelectorAll('.jogo, .card').forEach(jogo => {
 
         const nome = jogo.querySelector('h3').textContent;
         const botao = jogo.querySelector('.favorito');
@@ -665,59 +693,60 @@
                 'favoritos',
                 JSON.stringify(favoritos)
             );
-
         });
-
     });
 
-document
-    .getElementById('btn-recomendar')
-    .addEventListener('click', (e) => {
 
-        e.preventDefault();
 
-        // VOLTA A MOSTRAR TODOS OS JOGOS
-        document.querySelectorAll('.jogo').forEach(jogo => {
-            jogo.style.display = '';
+
+    document
+        .getElementById('btn-recomendar')
+        .addEventListener('click', (e) => {
+
+            e.preventDefault();
+
+            // VOLTA A MOSTRAR TODOS OS JOGOS
+            document.querySelectorAll('.jogo').forEach(jogo => {
+                jogo.style.display = '';
+            });
+
+            const jogos =
+                document.querySelectorAll('.jogo');
+
+            const sorteado =
+                jogos[Math.floor(Math.random() * jogos.length)];
+
+            const nome =
+                sorteado.querySelector('h3').textContent;
+
+            const genero =
+                sorteado.querySelector('p').textContent;
+
+            const nota =
+                sorteado.querySelector('.nota').textContent;
+
+            const imagem =
+                sorteado.querySelector('img').src;
+
+            document.getElementById('nome-recomendado')
+                .textContent = nome;
+
+            document.getElementById('genero-recomendado')
+                .textContent = '🎮 Gênero: ' + genero;
+
+            document.getElementById('nota-recomendada')
+                .textContent = nota;
+
+            document.getElementById('imagem-recomendada')
+                .src = imagem;
+
+            document.getElementById('modal-recomendacao')
+                .style.display = 'block';
         });
-
-        const jogos =
-            document.querySelectorAll('.jogo');
-
-        const sorteado =
-            jogos[Math.floor(Math.random() * jogos.length)];
-
-        const nome =
-            sorteado.querySelector('h3').textContent;
-
-        const genero =
-            sorteado.querySelector('p').textContent;
-
-        const nota =
-            sorteado.querySelector('.nota').textContent;
-
-        const imagem =
-            sorteado.querySelector('img').src;
-
-        document.getElementById('nome-recomendado')
-            .textContent = nome;
-
-        document.getElementById('genero-recomendado')
-            .textContent = '🎮 Gênero: ' + genero;
-
-        document.getElementById('nota-recomendada')
-            .textContent = nota;
-
-        document.getElementById('imagem-recomendada')
-            .src = imagem;
-
+    function fecharModalRecomendacao() {
         document.getElementById('modal-recomendacao')
-            .style.display = 'block';
-    });
-function fecharModalRecomendacao() {
-    document.getElementById('modal-recomendacao')
-        .style.display = 'none';
-}
+            .style.display = 'none';
+    }
 </script>
 
 </html>
