@@ -318,7 +318,7 @@ footer{
 
 header .btn-adicionarrr{
     background:#ff058e;
-    color:#888888;
+    color:white;
     border:none;
     padding:10px 15px;
     border-radius:8px;
@@ -352,7 +352,7 @@ header .btn-adicionarrr:hover{
     margin-top:15px;
     padding:12px;
     background:#ff1493;
-    color:#888888;
+    color:white;
     border:none;
     border-radius:8px;
     font-size:1rem;
