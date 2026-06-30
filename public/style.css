@@ -79,8 +79,11 @@ header input{
 
 .sidebar h3{
     color:#ff058e;
-    margin-top:60px;
     margin-bottom:20px;
+}
+
+.menu-atalhos + h3{
+    margin-top:25px;
 }
 
 .sidebar #menu-filtros{
@@ -231,7 +234,7 @@ footer{
 
 .modal-content{
     background:#1d1d20;
-    color:#fff;
+    color:#888888;
     width:90%;
     max-width:500px;
     margin:10% auto;
@@ -262,7 +265,7 @@ footer{
 #descricao-jogo{
     font-size:1rem;
     line-height:1.5;
-    color:#dcdcdc;
+    color:#888888;
 }
 
 .info-jogo{
@@ -288,11 +291,11 @@ footer{
 #preco-jogo{
     font-size:2rem;
     font-weight:bold;
-    color:white;
+    color:888888;
 }
 
 #plataforma-jogo{
-    color:#dcdcdc;
+    color:#888888;
     line-height:1.6;
 }
 
@@ -302,7 +305,7 @@ footer{
     right:15px;
     font-size:22px;
     cursor:pointer;
-    color:#fff;
+    color:#888888;
     transition:0.2s;
 }
 
@@ -315,7 +318,7 @@ footer{
 
 header .btn-adicionarrr{
     background:#ff058e;
-    color:white;
+    color:#888888;
     border:none;
     padding:10px 15px;
     border-radius:8px;
@@ -349,7 +352,7 @@ header .btn-adicionarrr:hover{
     margin-top:15px;
     padding:12px;
     background:#ff1493;
-    color:white;
+    color:#888888;
     border:none;
     border-radius:8px;
     font-size:1rem;
@@ -366,11 +369,98 @@ header .btn-adicionarrr:hover{
 .fechar-menu{
     background:none;
     border:none;
-    color:white;
+    color:#888888;
     font-size:24px;
     cursor:pointer;
 
     position:absolute;
     top:15px;
     right:15px;
+}
+
+.jogo{
+    animation: aparecer .5s ease;
+}
+
+@keyframes aparecer{
+    from{
+        opacity:0;
+        transform:translateY(20px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+.jogo{
+    transition:.3s;
+}
+
+.jogo:hover{
+    transform:translateY(-10px);
+}
+
+.rodape-card{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 15px;
+}
+
+.favorito{
+    border: none;
+    background: none;
+    cursor: pointer;
+    font-size: 22px;
+    padding: 0;
+    margin-right: 10px;
+}
+
+.nota{
+    font-size: 1.1rem;
+}
+
+.menu-atalhos{
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+
+    margin-bottom:20px;
+    padding-bottom:15px;
+
+    border-bottom:1px solid rgba(255,255,255,0.15);
+}
+
+.menu-atalhos a{
+    text-decoration:none;
+    color:#888888;
+    padding:12px;
+    border-radius:8px;
+    transition:0.3s;
+}
+
+.menu-atalhos a:hover{
+    background:#3a3a3a;
+}
+
+#nome-recomendado{
+    color:#ff058f8c;
+    margin-top:15px;
+    font-size:1.5rem;
+}
+
+#genero-recomendado,
+#nota-recomendada{
+    margin-top:10px;
+    color:#888888;
+}
+
+#imagem-recomendada{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+    border-radius:10px;
+    margin:15px 0;
 }
