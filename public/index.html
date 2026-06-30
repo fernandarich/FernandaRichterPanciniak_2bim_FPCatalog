@@ -29,12 +29,23 @@
 
             <button id="fechar-menu" class="fechar-menu">✕</button>
 
+            <h3>Atalhos</h3>
+
+            <nav class="menu-atalhos">
+                <a href="#" id="btn-favoritos" class="btn-filtro">
+                    ❤️ Favoritos
+                </a>
+
+                <a href="#" id="btn-recomendar" class="btn-filtro">
+                    🎲 Me Recomende um Jogo
+                </a>
+            </nav>
+
             <h3>Gêneros</h3>
 
             <nav id="menu-filtros">
-                <a href="#"
-                    class="btn-filtro ativo">Todos</a><!--o # significa que o link não leva a lugar algum, ou seja, fica na mesma página-->
-                <a href="#" class="btn-filtro">RPG</a><!--então ele funciona como filtro-->
+                <a href="#" class="btn-filtro ativo">Todos</a>
+                <a href="#" class="btn-filtro">RPG</a>
                 <a href="#" class="btn-filtro">Sandbox</a>
                 <a href="#" class="btn-filtro">Aventura</a>
                 <a href="#" class="btn-filtro">Ação</a>
@@ -65,14 +76,20 @@
                         <img src="imagens/minecraft.jpg" alt="Minecraft">
                         <h3>Minecraft</h3>
                         <p>Sandbox</p>
-                        <span>⭐ 9.5</span>
+                        <div class="rodape-card">
+                            <span class="nota">⭐ 9.3</span>
+                            <button class="favorito">🤍</button>
+                        </div>
                     </article>
 
                     <article class="card" onclick="buscarDescricao(3)">
                         <img src="imagens/hollow.jpg" alt="Hollow Knight">
                         <h3>Hollow Knight</h3>
                         <p>Aventura</p>
-                        <span>⭐ 9.7</span>
+                        <div class="rodape-card">
+                            <span class="nota">⭐ 9.3</span>
+                            <button class="favorito">🤍</button>
+                        </div>
                     </article>
 
                 </div>
@@ -92,168 +109,240 @@
                         <img src="imagens/stardew.jpg" alt="Stardew Valley">
                         <h3>Stardew Valley</h3>
                         <p>Simulação</p>
-                        <span>⭐ 9.3</span>
+                        <div class="rodape-card">
+                            <span class="nota">⭐ 9.3</span>
+                            <button class="favorito">🤍</button>
+                        </div>
                     </article>
 
                     <article class="jogo" onclick="buscarDescricao(8)">
                         <img src="imagens/fortnite.jpg" alt="Fortnite">
                         <h3>Fortnite</h3>
                         <p>Battle Royale</p>
-                        <span>⭐ 8.3</span>
+                        <div class="rodape-card">
+                            <span class="nota">⭐ 9.3</span>
+                            <button class="favorito">🤍</button>
+                        </div>
                     </article>
 
                     <article class="jogo" onclick="buscarDescricao(9)">
                         <img src="imagens/league.webp" alt="League of Legends">
                         <h3>League of Legends</h3>
                         <p>Estratégia</p>
-                        <span>⭐ 7.7</span>
+                        <div class="rodape-card">
+                            <span class="nota">⭐ 9.3</span>
+                            <button class="favorito">🤍</button>
+                        </div>
                     </article>
 
                     <article class="jogo" onclick="buscarDescricao(6)">
                         <img src="imagens/roblox.jpg" alt="Roblox">
                         <h3>Roblox</h3>
                         <p>Sandbox</p>
-                        <span>⭐ 9.5</span>
+                        <div class="rodape-card">
+                            <span class="nota">⭐ 9.3</span>
+                            <button class="favorito">🤍</button>
+                        </div>
                     </article>
 
                     <article class="jogo" onclick="buscarDescricao(7)">
                         <img src="imagens/thesims.jpg" alt="The Sims 4">
                         <h3>The Sims 4</h3>
                         <p>Simulação</p>
-                        <span>⭐ 8.5</span>
+                        <div class="rodape-card">
+                            <span class="nota">⭐ 9.3</span>
+                            <button class="favorito">🤍</button>
+                        </div>
                     </article>
 
                     <article class="jogo" onclick="buscarDescricao(4)">
                         <img src="imagens/reddead.jpg" alt="Red Dead Redemption">
                         <h3>Red Dead Redemption</h3>
                         <p>Aventura</p>
-                        <span>⭐ 9.2</span>
+                        <div class="rodape-card">
+                            <span class="nota">⭐ 9.3</span>
+                            <button class="favorito">🤍</button>
+                        </div>
                     </article>
 
                     <article class="jogo" onclick="buscarDescricao(5)">
                         <img src="imagens/aquiet.jpg" alt="A Quiet Place">
                         <h3>A Quiet Place The Road Ahead</h3>
                         <p>Sobrevivência</p>
-                        <span>⭐ 7.5</span>
+                        <div class="rodape-card">
+                            <span class="nota">⭐ 9.3</span>
+                            <button class="favorito">🤍</button>
+                        </div>
                     </article>
 
                     <article class="jogo" onclick="buscarDescricao(10)">
                         <img src="imagens/overcooked.jpg" alt="Overcooked!">
                         <h3>Overcooked!</h3>
                         <p>Simulação</p>
-                        <span>⭐ 8.9</span>
+                        <div class="rodape-card">
+                            <span class="nota">⭐ 9.3</span>
+                            <button class="favorito">🤍</button>
+                        </div>
                     </article>
 
                     <article class="jogo" onclick="buscarDescricao(11)">
                         <img src="imagens/godofwar.jpg" alt="God of War">
                         <h3>God of War</h3>
                         <p>Ação</p>
-                        <span>⭐ 9.7</span>
+                        <div class="rodape-card">
+                            <span class="nota">⭐ 9.3</span>
+                            <button class="favorito">🤍</button>
+                        </div>
                     </article>
 
                     <article class="jogo" onclick="buscarDescricao(12)">
                         <img src="imagens/residente.jpg" alt="Resident Evil 4">
                         <h3>Resident Evil 4</h3>
                         <p>Terror</p>
-                        <span>⭐ 9.6</span>
+                        <div class="rodape-card">
+                            <span class="nota">⭐ 9.3</span>
+                            <button class="favorito">🤍</button>
+                        </div>
                     </article>
 
                     <article class="jogo" onclick="buscarDescricao(13)">
                         <img src="imagens/pubg.jpg" alt="PUBG: Battlegrounds">
                         <h3>PUBG: Battlegrounds</h3>
                         <p>Battle Royale</p>
-                        <span>⭐ 8.7</span>
+                        <div class="rodape-card">
+                            <span class="nota">⭐ 9.3</span>
+                            <button class="favorito">🤍</button>
+                        </div>
                     </article>
 
                     <article class="jogo" onclick="buscarDescricao(14)">
                         <img src="imagens/lifeis.jpg" alt="Life is Strange">
                         <h3>Life is Strange</h3>
                         <p>Aventura</p>
-                        <span>⭐ 9.1</span>
+                        <div class="rodape-card">
+                            <span class="nota">⭐ 9.3</span>
+                            <button class="favorito">🤍</button>
+                        </div>
                     </article>
 
                     <article class="jogo" onclick="buscarDescricao(15)">
                         <img src="imagens/valorant.jpg" alt="Valorant">
                         <h3>Valorant</h3>
                         <p>Ação</p>
-                        <span>⭐ 8.8</span>
+                        <div class="rodape-card">
+                            <span class="nota">⭐ 9.3</span>
+                            <button class="favorito">🤍</button>
+                        </div>
                     </article>
 
                     <article class="jogo" onclick="buscarDescricao(16)">
                         <img src="imagens/genshin.jpg" alt="Genshin Impact">
                         <h3>Genshin Impact</h3>
                         <p>RPG</p>
-                        <span>⭐ 8.9</span>
+                        <div class="rodape-card">
+                            <span class="nota">⭐ 9.3</span>
+                            <button class="favorito">🤍</button>
+                        </div>
                     </article>
 
                     <article class="jogo" onclick="buscarDescricao(17)">
                         <img src="imagens/freefire.webp" alt="Free Fire">
                         <h3>Free Fire</h3>
                         <p>Battle Royale</p>
-                        <span>⭐ 8.4</span>
+                        <div class="rodape-card">
+                            <span class="nota">⭐ 9.3</span>
+                            <button class="favorito">🤍</button>
+                        </div>
                     </article>
 
                     <article class="jogo" onclick="buscarDescricao(18)">
                         <img src="imagens/clash.webp" alt="Clash Royale">
                         <h3>Clash Royale</h3>
                         <p>Estratégia</p>
-                        <span>⭐ 8.6</span>
+                        <div class="rodape-card">
+                            <span class="nota">⭐ 9.3</span>
+                            <button class="favorito">🤍</button>
+                        </div>
                     </article>
 
                     <article class="jogo" onclick="buscarDescricao(19)">
                         <img src="imagens/fnaf.jpg" alt="Five Nights at Freddy's">
                         <h3>Five Nights at Freddy's</h3>
                         <p>Terror</p>
-                        <span>⭐ 8.5</span>
+                        <div class="rodape-card">
+                            <span class="nota">⭐ 9.3</span>
+                            <button class="favorito">🤍</button>
+                        </div>
                     </article>
 
                     <article class="jogo" onclick="buscarDescricao(20)">
                         <img src="imagens/cuphead.png" alt="Cuphead">
                         <h3>Cuphead</h3>
                         <p>Ação</p>
-                        <span>⭐ 9.0</span>
+                        <div class="rodape-card">
+                            <span class="nota">⭐ 9.3</span>
+                            <button class="favorito">🤍</button>
+                        </div>
                     </article>
 
                     <article class="jogo" onclick="buscarDescricao(21)">
                         <img src="imagens/poppy.jpg" alt="Poppy Playtime">
                         <h3>Poppy Playtime</h3>
                         <p>Terror</p>
-                        <span>⭐ 8.2</span>
+                        <div class="rodape-card">
+                            <span class="nota">⭐ 9.3</span>
+                            <button class="favorito">🤍</button>
+                        </div>
                     </article>
 
                     <article class="jogo" onclick="buscarDescricao(22)">
                         <img src="imagens/road.jpg" alt="Road 96">
                         <h3>Road 96</h3>
                         <p>Aventura</p>
-                        <span>⭐ 8.9</span>
+                        <div class="rodape-card">
+                            <span class="nota">⭐ 9.3</span>
+                            <button class="favorito">🤍</button>
+                        </div>
                     </article>
 
                     <article class="jogo" onclick="buscarDescricao(23)">
                         <img src="imagens/plant.png" alt="Plants vs. Zombies">
                         <h3>Plants vs. Zombies</h3>
                         <p>Estratégia</p>
-                        <span>⭐ 8.8</span>
+                        <div class="rodape-card">
+                            <span class="nota">⭐ 9.3</span>
+                            <button class="favorito">🤍</button>
+                        </div>
                     </article>
 
                     <article class="jogo" onclick="buscarDescricao(24)">
                         <img src="imagens/terraria.jpg" alt="Terraria">
                         <h3>Terraria</h3>
                         <p>Sandbox</p>
-                        <span>⭐ 9.8</span>
+                        <div class="rodape-card">
+                            <span class="nota">⭐ 9.3</span>
+                            <button class="favorito">🤍</button>
+                        </div>
                     </article>
 
                     <article class="jogo" onclick="buscarDescricao(25)">
                         <img src="imagens/fifa.webp" alt="EA Sports">
                         <h3>EA Sports FC 26</h3>
                         <p>Esportes</p>
-                        <span>⭐ 7.0</span>
+                        <div class="rodape-card">
+                            <span class="nota">⭐ 9.3</span>
+                            <button class="favorito">🤍</button>
+                        </div>
                     </article>
 
                     <article class="jogo" onclick="buscarDescricao(26)">
                         <img src="imagens/mario.jpg" alt="Mario Kart">
                         <h3>Mario Kart</h3>
                         <p>Corrida</p>
-                        <span>⭐ 8.7</span>
+                        <div class="rodape-card">
+                            <span class="nota">⭐ 9.3</span>
+                            <button class="favorito">🤍</button>
+                        </div>
                     </article>
 
                 </div>
@@ -281,7 +370,7 @@
                 <h2 id="titulo-jogo"></h2>
 
                 <p id="descricao-jogo"></p>
-                
+
                 <div class="info-jogo">
 
                     <div class="info-item">
@@ -333,6 +422,29 @@
 
         </div>
     </div>
+
+    <div id="modal-recomendacao" class="modal">
+
+        <div class="modal-content">
+
+            <span class="fechar" onclick="fecharModalRecomendacao()">
+                ×
+            </span>
+
+            <h2>🎲 Jogo Recomendado</h2>
+
+            <img id="imagem-recomendada" src="" alt="Jogo recomendado">
+
+            <h3 id="nome-recomendado"></h3>
+
+            <p id="genero-recomendado"></p>
+
+            <p id="nota-recomendada"></p>
+
+        </div>
+
+    </div>
+
     <footer>
         <p>Fernanda Richter Panciniak - FP Catalog © 2026</p>
     </footer>
@@ -524,6 +636,88 @@
         sidebar.classList.remove("aberta");
     });
 
+    const favoritos = JSON.parse(localStorage.getItem('favoritos')) || [];
+
+    document.querySelectorAll('.jogo').forEach(jogo => {
+
+        const nome = jogo.querySelector('h3').textContent;
+        const botao = jogo.querySelector('.favorito');
+
+        if (favoritos.includes(nome)) {
+            botao.textContent = '❤️';
+        }
+
+        botao.addEventListener('click', (e) => {
+
+            e.stopPropagation();
+
+            const indice = favoritos.indexOf(nome);
+
+            if (indice === -1) {
+                favoritos.push(nome);
+                botao.textContent = '❤️';
+            } else {
+                favoritos.splice(indice, 1);
+                botao.textContent = '🤍';
+            }
+
+            localStorage.setItem(
+                'favoritos',
+                JSON.stringify(favoritos)
+            );
+
+        });
+
+    });
+
+document
+    .getElementById('btn-recomendar')
+    .addEventListener('click', (e) => {
+
+        e.preventDefault();
+
+        // VOLTA A MOSTRAR TODOS OS JOGOS
+        document.querySelectorAll('.jogo').forEach(jogo => {
+            jogo.style.display = '';
+        });
+
+        const jogos =
+            document.querySelectorAll('.jogo');
+
+        const sorteado =
+            jogos[Math.floor(Math.random() * jogos.length)];
+
+        const nome =
+            sorteado.querySelector('h3').textContent;
+
+        const genero =
+            sorteado.querySelector('p').textContent;
+
+        const nota =
+            sorteado.querySelector('.nota').textContent;
+
+        const imagem =
+            sorteado.querySelector('img').src;
+
+        document.getElementById('nome-recomendado')
+            .textContent = nome;
+
+        document.getElementById('genero-recomendado')
+            .textContent = '🎮 Gênero: ' + genero;
+
+        document.getElementById('nota-recomendada')
+            .textContent = nota;
+
+        document.getElementById('imagem-recomendada')
+            .src = imagem;
+
+        document.getElementById('modal-recomendacao')
+            .style.display = 'block';
+    });
+function fecharModalRecomendacao() {
+    document.getElementById('modal-recomendacao')
+        .style.display = 'none';
+}
 </script>
 
 </html>
