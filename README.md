@@ -6,6 +6,10 @@ O sistema possui uma barra de pesquisa que permite procurar jogos pelo nome. Con
 
 Outra funcionalidade importante do projeto é a exibição dos detalhes dos jogos. Quando o usuário clica em um card, uma janela é aberta mostrando informações mais completas sobre aquele jogo, como descrição, plataforma, ano de lançamento e nota. Dessa forma, não é necessário sair da página principal para obter mais informações.
 
+Uma funcionalidade também importante, foi o 'Me recomende um jogo'. Ele busca um jogo aleatorio no sistema do banco de dados e sugere para o cliente.
+
+Também tem a função de favoritos, onde você clica no coração do lado inferior direito do card do jogo e ele é adicionado ao seus favoritos. No menu lateral tem uma parte onde você pode acessar esses favoritos sempre que quiser
+
 Para criar o projeto, utilizei HTML para estruturar as páginas, CSS para estilizar a interface e JavaScript para adicionar as funcionalidades e interações do site. Também utilizei PostgreSQL para armazenar as informações dos jogos e dos gêneros em um banco de dados.
 
 Tecnologias utilizadas:
