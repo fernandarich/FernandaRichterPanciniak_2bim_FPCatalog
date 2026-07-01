@@ -1,376 +1,519 @@
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-body{
-    font-family:Arial, Helvetica, sans-serif;
-    background:#1a1a1a;
-    color:white;
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #1a1a1a;
+    color: white;
 }
 
 /* HEADER */
 
-header{
-    background:#2a2a2a;
-    padding:20px 50px;
-    display:flex;
-    align-items:center;
-    gap:15px;
+header {
+    background: #2a2a2a;
+    padding: 20px 50px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
 }
 
-header h1{
-    color:#ff058e;
-    font-family:'Times New Roman', Times, serif;
-    font-size:50px;
-    margin-right:auto;
+header h1 {
+    color: #ff058e;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 50px;
+    margin-right: auto;
 }
 
-header input{
-    font-family:Georgia, 'Times New Roman', Times, serif;
-    padding:8px;
-    border-radius:50px;
-    border:1px solid #ccc;
-    width:220px;
+header input {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    padding: 8px;
+    border-radius: 50px;
+    border: 1px solid #ccc;
+    width: 220px;
 }
 
 /* BOTÃO MENU */
 
-.btn-menu{
-    background:none;
-    border:none;
-    color:white;
-    font-size:28px;
-    cursor:pointer;
-    transition:0.3s;
+.btn-menu {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 28px;
+    cursor: pointer;
+    transition: 0.3s;
 }
 
-.btn-menu:hover{
-    color:#ff058e;
+.btn-menu:hover {
+    color: #ff058e;
 }
 
 /* SIDEBAR */
 
-.sidebar{
-    position:fixed;
-    top:0;
-    left:-260px;
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: -260px;
 
-    width:260px;
-    height:100vh;
+    width: 260px;
+    height: 100vh;
 
-    background:#2a2a2a;
+    background: #2a2a2a;
 
-    padding:25px;
+    padding: 25px;
 
-    transition:0.3s;
+    transition: 0.3s;
 
-    z-index:1000;
+    z-index: 1000;
 
-    overflow-y:auto;
+    overflow-y: auto;
 
-    box-shadow:2px 0 15px rgba(0,0,0,0.4);
+    box-shadow: 2px 0 15px rgba(0, 0, 0, 0.4);
 }
 
-.sidebar.aberta{
-    left:0;
+.sidebar.aberta {
+    left: 0;
 }
 
-.sidebar h3{
-    color:#ff058e;
-    margin-top:60px;
-    margin-bottom:20px;
+.sidebar h3 {
+    color: #ff058e;
+    margin-bottom: 20px;
 }
 
-.sidebar #menu-filtros{
-    display:flex;
-    flex-direction:column;
-    gap:10px;
+.menu-atalhos+h3 {
+    margin-top: 25px;
 }
 
-.sidebar .btn-filtro{
-    text-decoration:none;
-    color:white;
-    padding:12px;
-    border-radius:8px;
-    transition:0.3s;
+.sidebar #menu-filtros {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
 
-.sidebar .btn-filtro:hover{
-    background:#3a3a3a;
+.sidebar .btn-filtro {
+    text-decoration: none;
+    color: white;
+    padding: 12px;
+    border-radius: 8px;
+    transition: 0.3s;
 }
 
-.sidebar .btn-filtro.ativo{
-    background:#ff058e;
+.sidebar .btn-filtro:hover {
+    background: #3a3a3a;
+}
+
+.sidebar .btn-filtro.ativo {
+    background: #ff058e;
 }
 
 /* HERO */
 
-.hero{
-    text-align:center;
-    padding:80px 20px;
+.hero {
+    text-align: center;
+    padding: 80px 20px;
 }
 
-.hero h2{
-    font-size:3rem;
-    margin-bottom:15px;
+.hero h2 {
+    font-size: 3rem;
+    margin-bottom: 15px;
 }
 
-.hero p{
-    font-size:1.2rem;
-    color:#cfcfcf;
+.hero p {
+    font-size: 1.2rem;
+    color: #cfcfcf;
 }
 
 /* CATÁLOGO */
 
-.catalogo{
-    padding:50px;
+.catalogo {
+    padding: 50px;
     margin: -60px;
 }
 
-.catalogo h2{
-    text-align:center;
-    margin-bottom:30px;
+.catalogo h2 {
+    text-align: center;
+    margin-bottom: 30px;
 }
 
 .cards,
-.lista-jogos{
-    display:flex;
-    justify-content:center;
-    gap:25px;
-    flex-wrap:wrap;
+.lista-jogos {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
 }
 
 /* CARDS */
 
 .card,
-.jogo{
-    width:300px;
-    background:#2a2a2a;
-    border-radius:12px;
-    overflow:hidden;
-    cursor:pointer;
-    transition:0.3s;
+.jogo {
+    width: 300px;
+    background: #2a2a2a;
+    border-radius: 12px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: 0.3s;
 }
 
 .card:hover,
-.jogo:hover{
-    transform:translateY(-5px);
+.jogo:hover {
+    transform: translateY(-5px);
 }
 
 .card img,
-.jogo img{
-    width:100%;
-    height:180px;
-    object-fit:cover;
+.jogo img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
 }
 
 .card h3,
-.jogo h3{
-    padding:15px 15px 5px;
-    color:#ff058e;
+.jogo h3 {
+    padding: 15px 15px 5px;
+    color: #ff058e;
 }
 
 .card p,
-.jogo p{
-    padding:0 15px;
+.jogo p {
+    padding: 0 15px;
 }
 
 .card span,
-.jogo span{
-    display:block;
-    padding:15px;
+.jogo span {
+    display: block;
+    padding: 15px;
 }
 
 /* CURIOSIDADE */
 
-main aside{
-    margin:40px;
-    padding:25px;
-    background:#2a2a2a;
-    border-left:5px solid #ff058e;
-    border-radius:10px;
+main aside {
+    margin: 40px;
+    padding: 25px;
+    background: #2a2a2a;
+    border-left: 5px solid #ff058e;
+    border-radius: 10px;
 }
 
 /* FOOTER */
 
-footer{
-    background:#2a2a2a;
-    text-align:center;
-    padding:20px;
-    margin-top:40px;
+footer {
+    background: #2a2a2a;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
 }
 
 /* PESQUISA SEM RESULTADO */
 
-.mensagem-erro{
-    display:none;
-    text-align:center;
-    font-family:Georgia, 'Times New Roman', Times, serif;
-    font-size:1.5rem;
-    font-weight:bold;
-    color:#888888;
-    margin:40px auto;
-    width:100%;
+.mensagem-erro {
+    display: none;
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #888888;
+    margin: 40px auto;
+    width: 100%;
 }
 
 /* MODAL */
 
-.modal{
-    display:none;
-    position:fixed;
-    z-index:9999;
-    left:0;
-    top:0;
-    width:100%;
-    height:100%;
-    background:rgba(0,0,0,0.75);
-    backdrop-filter:blur(6px);
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.75);
+    backdrop-filter: blur(6px);
 }
 
-.modal-content{
-    background:#1d1d20;
-    color:#fff;
-    width:90%;
-    max-width:500px;
-    margin:10% auto;
-    padding:25px;
-    border-radius:16px;
-    box-shadow:0 10px 40px rgba(0,0,0,0.5);
-    position:relative;
-    animation:aparecer 0.25s ease-in-out;
+.modal-content {
+    background: #1d1d20;
+    color: #888888;
+    width: 90%;
+    max-width: 500px;
+    margin: 10% auto;
+    padding: 25px;
+    border-radius: 16px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+    position: relative;
+    animation: aparecer 0.25s ease-in-out;
 }
 
-@keyframes aparecer{
-    from{
-        transform:scale(0.9);
-        opacity:0;
+@keyframes aparecer {
+    from {
+        transform: scale(0.9);
+        opacity: 0;
     }
-    to{
-        transform:scale(1);
-        opacity:1;
+
+    to {
+        transform: scale(1);
+        opacity: 1;
     }
 }
 
-.modal-content h2{
-    margin-bottom:10px;
-    font-size:1.6rem;
-    color:#ff058e;
+.modal-content h2 {
+    margin-bottom: 10px;
+    font-size: 1.6rem;
+    color: #ff058e;
 }
 
-#descricao-jogo{
-    font-size:1rem;
-    line-height:1.5;
-    color:#dcdcdc;
+#descricao-jogo {
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #888888;
 }
 
-.info-jogo{
-    margin-top:25px;
-    padding-top:20px;
-    border-top:1px solid #3a3a3a;
+.info-jogo {
+    margin-top: 25px;
+    padding-top: 20px;
+    border-top: 1px solid #3a3a3a;
 }
 
-.info-item{
-    margin-bottom:20px;
+.info-item {
+    margin-bottom: 20px;
 }
 
-.titulo-info{
-    display:block;
-    color:#ff058e;
-    font-size:0.95rem;
-    font-weight:bold;
-    margin-bottom:8px;
-    text-transform:uppercase;
-    letter-spacing:1px;
+.titulo-info {
+    display: block;
+    color: #ff058e;
+    font-size: 0.95rem;
+    font-weight: bold;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
-#preco-jogo{
-    font-size:2rem;
-    font-weight:bold;
-    color:white;
+#preco-jogo {
+    font-size: 2rem;
+    font-weight: bold;
+    color: 888888;
 }
 
-#plataforma-jogo{
-    color:#dcdcdc;
-    line-height:1.6;
+#plataforma-jogo {
+    color: #888888;
+    line-height: 1.6;
 }
 
-.fechar{
-    position:absolute;
-    top:10px;
-    right:15px;
-    font-size:22px;
-    cursor:pointer;
-    color:#fff;
-    transition:0.2s;
+.fechar {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 22px;
+    cursor: pointer;
+    color: #888888;
+    transition: 0.2s;
 }
 
-.fechar:hover{
-    color:#ff0000;
-    transform:scale(1.2);
+.fechar:hover {
+    color: #ff0000;
+    transform: scale(1.2);
 }
 
 /* BOTÃO ADICIONAR */
 
-header .btn-adicionarrr{
-    background:#ff058e;
-    color:white;
-    border:none;
-    padding:10px 15px;
-    border-radius:8px;
-    cursor:pointer;
-    font-weight:bold;
-    transition:0.3s;
+header .btn-adicionarrr {
+    background: #ff058e;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
 }
 
-header .btn-adicionarrr:hover{
-    transform:scale(1.05);
+header .btn-adicionarrr:hover {
+    transform: scale(1.05);
 }
 
 /* FORMULÁRIO */
 
 #modal-adicionar input,
-#modal-adicionar textarea{
-    width:100%;
-    margin:10px 0;
-    padding:10px;
-    border-radius:8px;
-    border:none;
+#modal-adicionar textarea {
+    width: 100%;
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 8px;
+    border: none;
 }
 
-#modal-adicionar textarea{
-    height:100px;
-    resize:none;
+#modal-adicionar textarea {
+    height: 100px;
+    resize: none;
 }
 
-.btn-enviar-jogo{
-    width:100%;
-    margin-top:15px;
-    padding:12px;
-    background:#ff1493;
-    color:white;
-    border:none;
-    border-radius:8px;
-    font-size:1rem;
-    font-weight:bold;
-    cursor:pointer;
-    transition:0.3s;
+.btn-enviar-jogo {
+    width: 100%;
+    margin-top: 15px;
+    padding: 12px;
+    background: #ff1493;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
 }
 
-.btn-enviar-jogo:hover{
-    transform:translateY(-2px);
-    background:#ff33aa;
+.btn-enviar-jogo:hover {
+    transform: translateY(-2px);
+    background: #ff33aa;
 }
 
-.fechar-menu{
-    background:none;
-    border:none;
-    color:white;
-    font-size:24px;
-    cursor:pointer;
+.fechar-menu {
+    background: none;
+    border: none;
+    color: #888888;
+    font-size: 24px;
+    cursor: pointer;
 
-    position:absolute;
-    top:15px;
-    right:15px;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+}
+
+.jogo {
+    animation: aparecer .5s ease;
+}
+
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.jogo {
+    transition: .3s;
+}
+
+.jogo:hover {
+    transform: translateY(-10px);
+}
+
+.rodape-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 15px;
+}
+
+.favorito {
+    border: none;
+    background: none;
+    cursor: pointer;
+    font-size: 22px;
+    padding: 0;
+    margin-right: 10px;
+}
+
+.nota {
+    font-size: 1.1rem;
+}
+
+.menu-atalhos {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.menu-atalhos a {
+    text-decoration: none;
+    color: #fff;
+    padding: 12px;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+.menu-atalhos a:hover {
+    background: #3a3a3a;
+}
+
+#nome-recomendado {
+    color: #ff058f8c;
+    margin-top: 15px;
+    font-size: 1.5rem;
+}
+
+#genero-recomendado,
+#nota-recomendada {
+    margin-top: 10px;
+    color: #888888;
+}
+
+#imagem-recomendada {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin: 15px 0;
+}
+
+/* --- CUSTOMIZAÇÃO DA BARRA DE ROLAGEM DO SIDEBAR --- */
+
+/* 1. Define a largura da barra (deixando-a mais fininha) */
+#sidebar::-webkit-scrollbar {
+    width: 6px;
+    /* Largura da barra vertical */
+}
+
+/* 2. O fundo da pista por onde a barra desliza */
+#sidebar::-webkit-scrollbar-track {
+    background: #1e1e1e;
+    /* Cor igual ou próxima ao fundo do seu menu */
+}
+
+/* 3. O pino/cursor que você arrasta */
+#sidebar::-webkit-scrollbar-thumb {
+    background: #ff007f;
+    /* O rosa do seu botão ativo (ou uma cor cinza discreta) */
+    border-radius: 10px;
+    /* Deixa as pontas arredondadas */
+}
+
+/* 4. Efeito opcional: muda a cor do pino ao passar o mouse por cima */
+#sidebar::-webkit-scrollbar-thumb:hover {
+    background: #d4006b;
+    /* Um tom de rosa ligeiramente mais escuro */
+}
+
+/* Remove a barra de rolagem horizontal da página inteira */
+html,
+body {
+    overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #121212;
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, #ff007f, #ff4da6);
+    border-radius: 10px;
+    border: 2px solid #121212;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(180deg, #ff4da6, #ff007f);
 }
